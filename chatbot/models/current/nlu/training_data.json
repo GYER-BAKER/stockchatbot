@@ -1,0 +1,141 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "great"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "that's not right"
+      },
+      {
+        "intent": "logout",
+        "text": "logout"
+      },
+      {
+        "intent": "logout",
+        "text": "end"
+      },
+      {
+        "intent": "logout",
+        "text": "byebye"
+      },
+      {
+        "intent": "logout",
+        "text": "bye"
+      },
+      {
+        "intent": "search",
+        "text": "I want to know something about the market"
+      },
+      {
+        "intent": "search",
+        "text": "How about AAPL today?"
+      },
+      {
+        "intent": "search",
+        "text": "Anyting new about AAPL?"
+      },
+      {
+        "intent": "search",
+        "text": "AAPL"
+      },
+      {
+        "intent": "search",
+        "text": "the price of APPL and TSLA, please."
+      },
+      {
+        "intent": "search_open",
+        "text": "open price"
+      },
+      {
+        "intent": "search_open",
+        "text": "Open price"
+      },
+      {
+        "intent": "search_open",
+        "text": "open price of AAPL"
+      },
+      {
+        "intent": "search_open",
+        "text": "i want to know the open price of AAPL"
+      },
+      {
+        "intent": "search_open",
+        "text": "open price of AAPL please"
+      },
+      {
+        "intent": "search_open",
+        "text": "the open price of APPL and TSLA, please."
+      },
+      {
+        "intent": "search_interest",
+        "text": "interest"
+      },
+      {
+        "intent": "search_interest",
+        "text": "market interest"
+      },
+      {
+        "intent": "search_interest",
+        "text": "show me the interest of AAPL"
+      },
+      {
+        "intent": "search_interest",
+        "text": "interest of AAPL"
+      },
+      {
+        "intent": "search_interest",
+        "text": "i want to know the interest of AAPL"
+      },
+      {
+        "intent": "search_volume",
+        "text": "search volume of AAPL"
+      },
+      {
+        "intent": "search_volume",
+        "text": "volume of AAPL"
+      },
+      {
+        "intent": "search_volume",
+        "text": "volume"
+      },
+      {
+        "intent": "search_volume",
+        "text": "total volume"
+      },
+      {
+        "intent": "search_volume",
+        "text": "i want to know the volume of AAPL"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

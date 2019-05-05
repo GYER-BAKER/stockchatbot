@@ -1,0 +1,179 @@
+﻿{
+  "rasa_nlu_data": {
+    "lookup_tables": [
+      {
+          "name": "stock",
+          "elements": "models/symbols.txt"
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "bye",
+        "intent": "logout",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "logout",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "open price",
+        "intent": "search_open",
+        "entities": []
+      },
+      {
+        "text": "open price of AAPL",
+        "intent": "search_open",
+        "entities": [
+          {
+            "start": 14,
+            "end": 18,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      },
+      {
+        "text": "open",
+        "intent": "search_open",
+        "entities": []
+      },
+      {
+        "text": "market interest",
+        "intent": "search_interest",
+        "entities": []
+      },
+      {
+        "text": "show me the interest of AAPL",
+        "intent": "search_interest",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      },
+      {
+        "text": "i want to know something about the market",
+        "intent": "search",
+        "entities": []
+      },
+      {
+        "text": "volume",
+        "intent": "search_volume",
+        "entities": []
+      },
+      {
+        "text": "total volume",
+        "intent": "search_volume",
+        "entities": []
+      },
+      {
+        "text": "How about AAPL today?",
+        "intent": "search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      },
+      {
+        "text": "no",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "logout",
+        "intent": "logout",
+        "entities": []
+      },
+      {
+        "text": "interest",
+        "intent": "search_interest",
+        "entities": []
+      },
+      {
+        "text": "search interest of AAPL",
+        "intent": "search_interest",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      },
+      {
+        "text": "search open price of AAPL",
+        "intent": "search_open",
+        "entities": [
+          {
+            "start": 21,
+            "end": 25,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      },
+      {
+        "text": "search volume of AAPL",
+        "intent": "search_volume",
+        "entities": [
+          {
+            "start": 17,
+            "end": 21,
+            "value": "AAPL",
+            "entity": "stock"
+          }
+        ]
+      }
+    ]
+  }
+}
