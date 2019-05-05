@@ -6,7 +6,8 @@ The NLP engine of the chatbot is Rasa NLU
 # requirement 
 Install libraries:
 ```
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 Run the chatbot server on wechat:
 ```
