@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 Run the chatbot server on wechat:
 ```
-python stockchatbot/main.py wechat
+python stockchatbot/main.py
 ```
 
 After you run the server on wechat mode, you will be requried to scan a QC code in wechat. The current account in wechat will be used to act as the chatbot.
