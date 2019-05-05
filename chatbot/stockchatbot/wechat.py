@@ -2,7 +2,7 @@ from wxpy import *
 from chatbot import Chatbot
 chatbots={}
 
-def start_wechat_server(interpreter):
+def wechat_server(interpreter):
     bot=Bot()
     
     @bot.register()
@@ -26,4 +26,4 @@ def start_wechat_server(interpreter):
 
 
 if __name__ == '__main__':
-    start_wechat_server(None)
+    wechat_server(None)

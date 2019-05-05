@@ -2,34 +2,35 @@ from iexfinance import get_available_symbols
 from data.state import *
 import re
 
+avai_symbol=[]
+ENTITY='entity'
+VALUE='value'
+PENDING='pending'
 INTENT='intent'
 NAME='name'
 CONFIDENCE='confidence'
 ENTITIES='entities'
-ENTITY='entity'
-VALUE='value'
-PENDING='pending'
 HANDLER='handler'
 PRECONDITION='precondition'
-available_symbols=[]
 
-def load_symbols():
-    global available_symbols
+
+def symbol_load():
+    global avai_symbol
     stocks=get_available_symbols()
     for stock in stocks:
-        available_symbols.append(stock['symbol'])
+        avai_symbol.append(stock['symbol'])
     print('Symbols successfully loaded.')
 
 
-def varify_symbols(symbols):
-    valid=[]
-    invalid=[]
+def symbol_var(symbols):
+    va=[]
+    inva=[]
     for symbol in symbols:
-        if symbol in available_symbols:
-            valid.append(symbol)
+        if symbol in avai_symbol:
+            va.append(symbol)
         else:
-            invalid.append(symbol)
-    return valid, invalid
+            inva.append(symbol)
+    return va, inva
 
 class Chatbot:
     def __init__(self,interpreter):
@@ -55,9 +56,7 @@ class Chatbot:
 
     def normal_nlp(self,msg):
         nlp_result=self.interpreter.parse(msg)
-        
-        user_intent=nlp_result[INTENT][NAME]
-        
+        u_intent=nlp_result[INTENT][NAME]        
         user_stocks=[]
         for enti in  nlp_result[ENTITIES]:
             if enti[ENTITY]==ENTITY_STOCK:
@@ -67,18 +66,16 @@ class Chatbot:
         
         re_stock=re.findall("[-|A-Z]{2,8}",msg)
         user_stocks.extend(re_stock)
-        
-        precondition,handler=PROPERTY_OF_ACTION[user_intent]
-
-        valid,invalid=varify_symbols(user_stocks)
-        if len(invalid)>0:
+        precondition,handler=PROPERTY_OF_ACTION[u_intent]
+        va,inva=symbol_var(user_stocks)
+        if len(inva)>0:
             if (not self.keys[PENDING]):
                     self.keys[PENDING]=True
                     self.keys[HANDLER]=handler
                     self.keys[PRECONDITION]=precondition
-            return "The {} seems invalid. Please give me the right symbol.".format(" ".join(invalid))
+            return "The {} seems inva. Please give me the right symbol.".format(" ".join(inva))
 
-        if len(valid)>0:
+        if len(va)>0:
             self.keys[STOCK_LIST]=user_stocks
 
         if self.keys[PENDING]:
