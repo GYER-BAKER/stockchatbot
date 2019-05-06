@@ -1,3 +1,5 @@
+![image](https://github.com/GYER-BAKER/stockchatbot/blob/master/chatbot/presentation_1.gif)
+
 # stockchatbot 
 
 This is a project of chatbotAI program.
